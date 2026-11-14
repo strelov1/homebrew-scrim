@@ -1,13 +1,12 @@
 class Scrim < Formula
   desc "Minimal headless browser for AI agents: one binary, no layout, no paint"
   homepage "https://github.com/strelov1/scrim"
-  version "0.1.0"
-  license "MIT"
-
   # Prebuilt binary from the project's own CI (.github/workflows/build.yml), which builds and
   # smoke-tests it on a macOS arm64 runner and attaches the tarball to the tagged release.
+  # The version is scanned from this URL.
   url "https://github.com/strelov1/scrim/releases/download/v0.1.0/scrim-0.1.0-macos-arm64.tar.gz"
   sha256 "6bdc88925f43e51ca5884db1e44d5d058357515f249332c42321810a3764a879"
+  license "MIT"
 
   # The bundled V8 archive is built with chained fixups, so the binary needs macOS 14 or newer.
   depends_on arch: :arm64
